@@ -1,0 +1,20 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: instance
+    image: debian:9
+playbooks:
+  prepare: prepare.yml
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+verifier:
+  name: inspec
+  lint:
+    name: rubocop

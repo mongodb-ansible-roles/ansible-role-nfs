@@ -1,0 +1,12 @@
+---
+- become: true
+  hosts: all
+  name: Prepare
+  tasks:
+    - name: Create shell initialization files
+      file:
+        path: "{{ item }}"
+        state: touch
+      with_items:
+        - ~/.bashrc
+        - ~/.bash_profile

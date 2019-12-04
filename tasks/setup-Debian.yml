@@ -1,0 +1,14 @@
+---
+- name: Install nfs-common package
+  apt:
+    name: nfs-common
+    state: present
+
+- name: Add nfsstat to PATH
+  blockinfile:
+    path: "{{ item }}"
+    marker: "# {mark} Adds nfsstat to PATH"
+    block: export PATH=/usr/sbin:$PATH
+  loop:
+    - ~/.bash_profile
+    - ~/.bashrc

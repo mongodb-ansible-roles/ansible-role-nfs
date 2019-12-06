@@ -15,6 +15,7 @@ Role Variables
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-------:|:--------:|
+| `nfs_user` | User that will be using nfs packages | string | `root` | yes
 
 Dependencies
 ------------
@@ -28,6 +29,8 @@ Example Playbook
 - hosts: all
   roles:
     - role: ansible-role-nfs
+      vars:
+        nfs_user: admin
 ```
 
 Development

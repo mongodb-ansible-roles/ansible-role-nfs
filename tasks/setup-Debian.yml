@@ -10,5 +10,5 @@
     marker: "# {mark} Adds nfsstat to PATH"
     block: export PATH=/usr/sbin:$PATH
   loop:
-    - ~/.bash_profile
-    - ~/.bashrc
+    - ~{{ nfs_user }}/.bash_profile
+    - ~{{ nfs_user }}/.bashrc

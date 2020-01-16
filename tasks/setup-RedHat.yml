@@ -1,0 +1,5 @@
+---
+- name: Install nfs-utils package
+  package:
+    name: nfs-utils
+    state: present

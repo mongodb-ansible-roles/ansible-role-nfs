@@ -1,0 +1,26 @@
+---
+- gather_facts: false
+  hosts: archlinux
+  name: Prepare Archlinux
+  tasks:
+    - name: Raw update pacman database
+      raw: pacman -Syu --noconfirm
+    - name: Raw install python
+      raw: pacman -S python3 --noconfirm
+    - name: Install sudo
+      pacman:
+        name: sudo
+        state: present
+
+- become: true
+  gather_facts: false
+  hosts: all
+  name: Prepare
+  tasks:
+    - name: Create shell initialization files
+      file:
+        path: "{{ item }}"
+        state: touch
+      with_items:
+        - ~/.bashrc
+        - ~/.bash_profile

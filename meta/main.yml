@@ -9,5 +9,9 @@ galaxy_info:
     - name: debian
       versions:
         - buster
+    - name: archlinux
+    - name: redhat
+      versions:
+        - 8
   galaxy_tags:
     - nfs

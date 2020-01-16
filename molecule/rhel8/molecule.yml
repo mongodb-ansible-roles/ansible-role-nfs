@@ -1,0 +1,25 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: rhel8
+    image: ubi8
+    registry:
+      url: registry.redhat.io
+      credentials:
+        username: ${REDHAT_REGISTRY_SERVICE_ACCOUNT_USERNAME}
+        password: ${REDHAT_REGISTRY_SERVICE_ACCOUNT_PASSWORD}
+playbooks:
+  prepare: prepare.yml
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+verifier:
+  name: testinfra
+  lint:
+    name: flake8

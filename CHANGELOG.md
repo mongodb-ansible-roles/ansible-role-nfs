@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/mongodb-ansible-roles/ansible-role-nfs/compare/v1.1.0...v1.2.0) (2020-01-16)
+
+
+### Bug Fixes
+
+* Makefile to be able to pass RHN creds to cmd ([8fdc0fe](https://github.com/mongodb-ansible-roles/ansible-role-nfs/commit/8fdc0feb240185dd41258cbdfda23655fc6dd562))
+
+
+### Features
+
+* Added Archlinux and Redhat support ([d554a07](https://github.com/mongodb-ansible-roles/ansible-role-nfs/commit/d554a0735c614769f24670e2d0ee022617553bcc))
+
 # [1.1.0](https://github.com/mongodb-ansible-roles/ansible-role-nfs/compare/v1.0.0...v1.1.0) (2019-12-06)
 
 
